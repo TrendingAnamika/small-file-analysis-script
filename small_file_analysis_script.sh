@@ -72,7 +72,7 @@ done < ${dbname}
 awk '($5 > 0)' ${model_dir}/${modelname}_Small_File_Count.csv > ${model_dir}/${modelname}_Table_SmallFiles_Count.csv
 
 # Sending Mail by Attaching Final List of CSV File with Count of File less than 250 MB
-echo -e "Hello Team, \n \n Please find the attachment of No. of files less than 250MB for each Hive Table. \n \n \n Thanks & Regards, \n \n AlgoIndia Analytics Team" | mailx -a ${model_dir}/${modelname}_Table_SmallFiles_Count.csv -s "${EXEC_ENV} - Automated - Hive Table File Size check"  -r "abc@mail" "test@mail.com"
+echo -e "Hello Team, \n \n Please find the attachment of No. of files less than 250MB for each Hive Table. \n \n \n Thanks & Regards, \n \n Data Analytics Team" | mailx -a ${model_dir}/${modelname}_Table_SmallFiles_Count.csv -s "${EXEC_ENV} - Automated - Hive Table File Size check"  -r "abc@mail" "test@mail.com"
                                                                                                                                                                             
 rm -r ${model_dir}
 
